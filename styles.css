@@ -1,0 +1,656 @@
+:root {
+    --main-color: #000;
+    --loader:#b9b9b9;
+    --modal-color:#707070;
+    --text-1:#ffff;
+    --text-2:#fad009;
+    --color-1:#fa8057;
+    --color-2:#ed2ea5;
+    --color-3:#6172c5;
+    --color-4:#2c0d2a;
+    --color-5:#1d313c;
+    --color-6:#f6733a;
+    --color-7:#ecd6c3;
+    --color-8:#4fa3ab;
+    --color-9:#387654;
+}
+@import url('https://fonts.cdnfonts.com/css/w95fa');
+
+/* loader */
+@keyframes l4 {
+    100% { background-size: 120%; }
+}
+.load {
+    background: #20091f;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(150% at 100% 100%);
+    transition: clip-path 2s ease-in-out;
+}
+
+.load2 {
+    clip-path: circle(0.0% at 100% 100%);
+}
+
+.logo {
+    border-radius: 100%;
+    height: 170px;
+    width: 170px;
+    margin-bottom: 20px;
+}
+
+.loader {
+    width: 120px;
+    height: 20px;
+    -webkit-mask: linear-gradient(90deg, #6172c5 70%, #0000 0) 0 / 20%;
+    background: 
+      linear-gradient(#6172c5 0 0) 0 / 0% no-repeat
+      var(--modal-color);
+    animation: l4 2s infinite steps(6);
+}
+
+
+/*     modales    */
+label{
+    font-family: Silkscreen;
+    color: var(--text-1);
+}
+input {
+    width: 40%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Silkscreen', sans-serif;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), 
+                -5px -5px 15px rgba(255, 255, 255, 0.7);
+    background-color: #f0f0f3;
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.1), 
+                inset -5px -5px 15px rgba(255, 255, 255, 0.7);
+}
+.btp{
+    align-items: center;
+    text-align: center;
+}
+.social-icon{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.social-icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    transition: 0.2s ease;
+}
+.ds{
+    text-align: center;
+}
+.social-icon a:hover{
+    color: white;
+    transform: scale(1.3) translateY(-5px);
+    background: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.form{
+    text-align: center;
+    justify-content: center;
+}
+.env {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100px;
+    font-family: Silkscreen;
+}
+.ds{
+    text-align: center;
+}
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 15px;
+    width: 100%;
+    height: 100%;
+}
+.modal-content {
+    background-color: var(--modal-color);
+    position: relative; 
+    top: 40%;
+    left: 36%;
+    width: 60%;
+    transform: translateY(-50%); 
+    box-shadow: 0px 0px 19px 2px rgba(199, 199, 199, 0.7);
+}
+.frig{
+    font-family: 'W95FA', sans-serif;
+    color: var(--text-1);
+    font-weight: 100;
+    font-size: 30px;
+    background-color: #1b00b4;
+    height: 90%;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.close {
+    background-color: #aaa;
+    float: right;
+    color: #303030;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: var(--main-color);
+    
+}
+.close:hover, .close:focus {
+    color: var(--main-color);
+}
+.t1{
+    padding: 20px;
+}
+.tpong{
+    text-align: center;
+}
+.modal-content1 {
+    background: url(./img/f7.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(40%) contrast(0.9); 
+}
+.modal-content2 {
+    background: url(./img/f8.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(40%) contrast(0.9); 
+}
+.modal-content3 {
+    background: url(./img/f9.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(40%) contrast(0.9); 
+}
+.modal-content4 {
+    background: url(./img/f4.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(40%) contrast(0.9);  
+}
+.modal-content5 {
+    background: url(./img/f5.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(40%) contrast(0.9); 
+}
+#resultado{
+    color: var(--text-1);
+}
+#modal5 {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+#pongCanvas {
+    border: 2px solid var(--main-color);
+    display: block;
+    margin: 0 auto;
+    height: 230px;
+    width: 600px;
+    background-color: var(--main-color);
+}
+#scoreBoard {
+    font-family: Silkscreen;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+#pauseButton {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100px;
+    font-family: Silkscreen;
+}
+
+/* pagina */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url(./img/f1.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+footer {
+    background-color: var(--modal-color);
+    margin-top: 20px;
+    height: 82px;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+} 
+p{
+    color: white;
+    font-family: Silkscreen;
+}
+h1{
+    font-family: Silkscreen;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-family: Silkscreen;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+.foto{
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+}
+.icon{
+    width: 45px;
+    height: 45px;
+} 
+.div1 {
+    grid-row: span 5 / span 5;
+}
+
+.div2 {
+    grid-column: span 4 / span 4;
+    grid-row: span 5 / span 5;
+}
+.icon-item{
+    justify-content: center;
+    text-align: center;
+    margin-left: -70px;
+}
+.icon-container{
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+}
+.flex{
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    justify-content: space-between;
+}
+.container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: var(--text-1);
+    background:var(--color-4);
+    padding: 2%;
+    border-radius: 10px;
+}
+.custom-size {
+    font-size: 50px;
+}
+.txt{
+    font-family: Silkscreen;
+}
+.text{
+    margin: 20px;
+    font-family: Silkscreen;
+}
+.txt_info{
+    color: var(--text-1);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+.txt_info1{
+    color: var(--text-1);
+    text-align: justify;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+.logo-mn {
+    border-radius: 100%;
+    height: 70px;
+    width: 70px;
+    margin-left: 2%;
+}
+.resultado{
+    color: var(--color-3);
+}
+.desc_hy{
+    color: var(--main-color);
+}
+.title{
+    color: var(--text-1);
+}
+.agr{
+    font-size:large;
+    font-family: Silkscreen;
+    font-weight: 600;
+}
+.txt_pt{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    color: var(--text-1);
+    text-align: center;
+}
+.py{
+    color: var(--text-1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
+@media screen and (max-width: 480px) {
+    .modal-content {
+        left: 5%;
+        width: 90%;
+    }
+
+    .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto {
+        height: 150px;
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    .text {
+        margin: 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .info {
+        flex-basis: 10%;
+    }
+
+    .custom-size {
+        font-size: 15px;
+    }
+
+    #pongCanvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .social-icon {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .social-icon a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    .parent {
+        grid-template-columns: 1fr;
+    }
+
+    .div1 {
+        grid-row: auto;
+    }
+
+    .div2 {
+        display: none;
+    }
+
+    .icon-item {
+        margin-left: 0;
+    }
+}
+
+/* Tablets y dispositivos medianos */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .modal-content {
+        right: 5%;
+        left: auto;
+        width: 70%;
+        margin-left: auto;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .icon{
+        width: 40px;
+        height: 40px;
+    } 
+    .info {
+        flex-basis: 30%;
+    }
+
+    #pongCanvas {
+        width: 90%;
+        height: auto;
+    }
+
+    input {
+        width: 60%;
+    }
+
+    .parent {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .icon-item {
+        margin-left: -35px;
+    }
+
+    /* Ajustes de tipografía */
+    .frig {
+        font-size: 24px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .txt_info, .txt_info1, .desc_hy {
+        font-size: 13px;
+    }
+
+    .txt_pt {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .py {
+        font-size: 13px;
+    }
+
+    #scoreBoard {
+        font-size: 18px;
+    }
+
+    .agr {
+        font-size: 14px;
+    }
+}
+
+/* Laptops y tablets grandes */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .modal-content {
+        right: 5%;
+        left: auto;
+        width: 65%;
+        margin-left: auto;
+    }
+
+    .container {
+        gap: 20px;
+    }
+
+    #pongCanvas {
+        width: 95%;
+        height: auto;
+    }
+
+    /* Ajustes de tipografía */
+    .frig {
+        font-size: 26px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+
+    .txt_info, .txt_info1, .desc_hy {
+        font-size: 14px;
+    }
+
+    .txt_pt {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .py {
+        font-size: 14px;
+    }
+}
+
+/* Ajustes generales para todos los tamaños */
+@media screen and (max-width: 1024px) {
+    body {
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .modal-content1, .modal-content2, .modal-content3, .modal-content4, .modal-content5 {
+        background-size: cover;
+        
+    }
+    .foto{
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+    }
+    footer {
+        flex-wrap: wrap;
+        padding: 10px;
+        height: auto;
+        text-align: center;
+    }
+    .text{
+        font-size: 14px;
+    }
+    .custom-size {
+        font-size: 25px;
+    }
+    .agr {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* Nuevo: Ajustes específicos para móviles pequeños */
+@media screen and (max-width: 480px) {
+    .frig {
+        font-size: 20px;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+
+    .txt_info, .txt_info1, .desc_hy {
+        font-size: 12px;
+    }
+
+    .txt_pt {
+        font-size: 13px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .py {
+        font-size: 12px;
+    }
+
+    #scoreBoard {
+        font-size: 16px;
+    }
+
+    .agr {
+        font-size: 12px;
+    }
+
+    .custom-size {
+        font-size: 30px;
+    }
+
+    .txt {
+        font-size: 12px;
+    }
+
+    input, button {
+        font-size: 12px;
+    }
+
+    .lb {
+        font-size: 12px;
+    }
+}
